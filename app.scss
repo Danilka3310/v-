@@ -1,0 +1,138 @@
+$primary-color: white;
+$secondary-color: #F53838;
+$font-family: 'Rubick', sans-serif;
+
+@mixin flex-conteiner-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin fonts-400 {
+    font-family: 'Rubik-normal', 'Arial', sans-serif;
+    font-weight: 400;
+}
+
+@mixin fonts-700 {
+    font-family: 'Rubik-bold', 'Arial', sans-serif;
+    font-weight: 700;
+}
+
+body {
+    font-family: $font-family;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    
+}
+
+header {
+    background: $primary-color;
+    color: #0B132A;
+    padding: 0 20px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            display: inline;
+            margin: 0 15px;
+
+            a {
+                color: #0B132A;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .buttons {
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &.btn-primary {
+                background-color: $secondary-color;
+                color: #0B132A;
+            }
+
+            &.btn-secondary {
+                background-color: white;
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.hero {
+    background: white;
+    color: #0B132A;
+    padding: 60px 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hero-content {
+        max-width: 600px;
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+    }
+
+    .hero-image {
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.features {
+    padding: 40px 0;
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+
+        .features-item {
+            text-align: center;
+
+            img {
+                max-width: 50px;
+            }
+
+            h3 {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+footer {
+    background: $primary-color;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
